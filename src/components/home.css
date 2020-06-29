@@ -1,0 +1,46 @@
+@media (max-width: 380px) {
+  .home {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    background-image: url(../images/selective-focus-photo-of-thick-books-1090941.jpg);
+    background-position: center;
+    background-size: cover;
+  }
+
+  .inner_wrap {
+    max-height: 760px;
+    min-height: 430px;
+    height: 100%;
+    margin: 50px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .inner_wrap .home_title {
+    margin: 0px auto 50px;
+    font-size: 2em;
+    color: white;
+  }
+
+  .inner_wrap .btn_login {
+    width: 200px;
+    height: 42px;
+    margin: 0 auto 10px;
+    border-radius: 50px;
+    border-style: none;
+    background-image: linear-gradient(to right, #FFD194 0%, #D1913C 100%);
+    font-size: 14px;
+    font-weight: 600;
+    color: white;
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.1);
+  }
+
+  .inner_wrap .btn_login:hover { background-position: right center; }
+
+  .inner_wrap .signup {
+    color: white;
+  }
+}

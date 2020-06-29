@@ -1,0 +1,46 @@
+.books {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    padding: 50px;
+    padding-top: 70px;
+  }
+  .books .book{
+    /*  책 검색결과가 하나였을 때 사진이 뜨지 않던 문제 : width: 18% 제거, img width %아닌 px로 고정하여 해결 */
+    /* max-width: 350px; */
+    background-color: white;
+    margin-bottom: 70px;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    align-items: center;
+    justify-content: flex-start;
+    margin: 40px;
+    margin-top: 30px;
+    border-radius: 5px;
+    color: #220d03;
+    /* box-shadow: 0 13px 27px -5px rgba(50,50,93,.25), 0 8px 16px -8px rgba(0,0,0,.3), 0 -6px 16px -6px rgba(0,0,0,.025); */
+    
+  }
+  .books .book * {
+    width: 350px;
+  }
+  
+  .book img {
+    box-shadow: 0 30px 60px -12px rgba(50,50,93,.15), 0 18px 36px -18px rgba(0,0,0,.15)
+  }
+
+  .book .book__title {
+    margin-top: 50px;
+    text-overflow: ellipsis; /* 줄바꿈 되지 않게 처리 */
+    overflow: hidden; /* 넘치는 글자는 자른다 */
+    white-space: nowrap; /* ... 처리 */
+  }
+
+  .book .book__authors {
+    opacity: 0.65;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+  }

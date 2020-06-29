@@ -5,16 +5,16 @@ import "./Book.css";
 function Book ({id, title, authors, publisher, Publication_date, contents, price, bookcover}) {
   return (
   <li className="book">
-    <img src={bookcover} alt={title} title={title} />
+    <img src={bookcover} onerror="this.style.display='none'" alt={title} title={title} />
     <div className="book__data">
       <h2 className="book__title">{ title }</h2>
       <h2 className="book__authors">{ authors }</h2>
     </div>
-      
-
   </li>
   );
 }
+
+// Book component : 도서 검색 부분에 그릴 화면.
 
 Book.propTypes = {
   id: PropTypes.string.isRequired,

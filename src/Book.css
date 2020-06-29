@@ -1,56 +1,84 @@
+@charset 'utf-8';
+
 .books {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    flex-wrap: wrap;
-    padding: 50px;
-    padding-top: 70px;
-    width: 80%;
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
   }
+
   .books .book{
-    width: 17%;
+    display: inline-block;
+    position: relative;
+    float: none;
+    width: 100%;
+    margin: 2vw 0;
+    padding: 11vw 8vw 6.7vw;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px 0 rgba(0,0,0,0.1);
     background-color: white;
-    margin-bottom: 70px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-between;
-    padding: 20px;
-    padding-top: 30px;
-    border-radius: 5px;
-    color: #220d03;
-    box-shadow: 0 13px 27px -5px rgba(50,50,93,.25), 0 8px 16px -8px rgba(0,0,0,.3), 0 -6px 16px -6px rgba(0,0,0,.025);
+    
+  }
+  .books .book *, .books .book .book__data * {
+    min-width: 300px;
+    width: 250px;
+    margin-left: auto;
+    margin-right: auto;
   }
   
   .book img {
-    position: relative;
-    max-width: 250px;
-    width: 90%;
-    box-shadow: 0 30px 60px -12px rgba(50,50,93,.25), 0 18px 36px -18px rgba(0,0,0,.3), 0 -12px 36px -8px rgba(0,0,0,.025);
+    display: block;
+    margin-bottom: 64px;
   }
 
   .book .book__title {
-    margin-top: 50px;
+    font-size: 34px;
+    font-weight: 600;
+    line-height: 1.30968;
+    letter-spacing: .011em;
+    margin-top: 20px;
   }
 
   .book .book__authors {
-    opacity: 0.65;
+    margin-top: 24px;
+    font-size: 30px;
+    color: #585858;
+    line-height: 1.61765;
+    letter-spacing: 0em;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
   }
-  .book h3 {
-    margin-bottom: 5px;
-    font-size: 24px;
-    color: #2c2c2c;
-  }
-  
-  .book .book__genres {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    display: flex;
-    margin: 5px 0px;
-  }
-  
-  .book .book__genres li {
-    margin-right: 10px;
-    font-size: 14px;
+  @media screen and (min-width: 768px) {
+ 
+    .books {
+      display: flex;
+      justify-content: center;
+      max-width: 2440px;
+      flex-wrap: wrap;
+      padding: 50px;
+      padding-top: 70px;
+      width: 100%;
+      padding: 11vw 5vw 6.7vw;
+
+    }
+    .books .book{
+      width: 18%;
+      min-width: 512px;
+      display: flex;
+      flex-direction: column;
+      flex-wrap: wrap;
+      align-content: flex-start;
+      align-items: flex-start;
+      justify-content: flex-start;
+      font-weight: 300;
+      padding: 20px;
+      flex-basis: 400px;
+      margin: 0.5vw 0.5vw;
+
+    }
+
+    .book img {
+      display: flex;
+      justify-content: center;
+    }
   }
