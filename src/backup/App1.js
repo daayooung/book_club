@@ -1,7 +1,7 @@
 import React from "react";
 import axios from "axios";
-import Book from "./Book";
-import "./App.css";
+import Book from "../components/Home";
+import "../components/home.css";
 
 class App extends React.Component {
   state = {

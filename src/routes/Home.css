@@ -12,11 +12,25 @@
 
   button {
     border-style: none;
+    background-color: transparent;
+  }
+
+  input {
+    border-style: none;
+  }
+
+ :focus  {
+    outline: none;
+  }
+
+  ::placeholder {
+    color: #dddddd
   }
 
   body {
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     font-size: 14px;
+    min-width: 320px;
   }
   
   html,
@@ -24,6 +38,12 @@
   #root,
   .container {
    height: 100%;
+  }
+
+  .inner_wrap {
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 0 16px 56px;
   }
 
   .loader {
