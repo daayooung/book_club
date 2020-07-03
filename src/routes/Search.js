@@ -1,14 +1,14 @@
-import React from 'react';
+import React, { Component } from 'react';
 import axios from "axios";
 import './Search.css';
 
-class Search extends React.Component {
-  state={
-    keyword: '',
-    isloading: true,
-    books: []
+class Search extends Component {
+  constructor(props){
+    super(props);
+    this.state={
+      keyword: ''
+    }
   }
-
   //  input의 value값을 keyword로 준다.
   // input에 onChange
   // form에 onsubmit
@@ -18,7 +18,7 @@ class Search extends React.Component {
     this.setState({
       keyword: e.target.value
     })
-    console.log(this.state.keyword)
+    console.log(this.props.keyword)
   }
   
   keywordSubmitHandler = (e) => {
@@ -30,11 +30,10 @@ class Search extends React.Component {
     this.setState({
       keyword: ''
     })
-
     // 상태 초기화
     
   }
-
+  
   getBooks = async() => {
     const { keyword } = this.state
     const {
@@ -66,14 +65,14 @@ class Search extends React.Component {
   }
 
   render () {
-    const { keyword } = this.state
+    const { keyword } = this.props
     const { keywordSubmitHandler } = this
     const { keywordChangeHandler } = this
     return (
       <section className="search">
-        <div className="seaarch_inner_wrap">
-          <form onSubmit={keywordSubmitHandler}>
-            <input type="text" name="search" placeholder="검색어를 입력하세요." value={keyword} onChange={keywordChangeHandler}></input>
+        <div className="search_inner_wrap">
+          <form onSubmit={keywordSubmitHandler.bind(this)}>
+            <input type="text" name="search" placeholder="검색어를 입력하세요." value={keyword} onChange={keywordChangeHandler.bind(this)}></input>
             <button type="submit" className="btn_search">
               <svg data-v-28783d35="" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <circle data-v-28783d35="" cx="11" cy="11" r="6" stroke="#666666" stroke-width="2"></circle>
